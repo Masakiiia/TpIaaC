@@ -1,18 +1,9 @@
 {
-  "name": "TP BTS SIO - IaC",
-  "image": "[mcr.microsoft.com/devcontainers/base:ubuntu](https://mcr.microsoft.com/devcontainers/base:ubuntu)",
+  "name": "TP SIO Universal",
+  "image": "mcr.microsoft.com/devcontainers/universal:2",
   "features": {
-    "ghcr.io/devcontainers/features/docker-in-docker:2": {},
     "ghcr.io/devcontainers/features/terraform:1": {},
     "ghcr.io/devcontainers/features/ansible:1": {}
   },
-  "customizations": {
-    "vscode": {
-      "extensions": [
-        "hashicorp.terraform",
-        "redhat.ansible"
-      ]
-    }
-  },
-  "postCreateCommand": "docker --version && terraform --version && ansible --version"
+  "postCreateCommand": "terraform -v && ansible --version"
 }
