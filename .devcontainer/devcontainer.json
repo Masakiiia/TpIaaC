@@ -1,5 +1,13 @@
 {
-  "name": "TP SIO Rescue",
+  "name": "TP SIO Rescue Mode",
   "image": "mcr.microsoft.com/devcontainers/universal:2",
-  "postCreateCommand": "pip install ansible && echo 'Installation OK'"
+  "postCreateCommand": "bash .devcontainer/setup.sh",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "hashicorp.terraform",
+        "redhat.ansible"
+      ]
+    }
+  }
 }
