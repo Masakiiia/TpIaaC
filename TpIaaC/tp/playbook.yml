@@ -2,5 +2,5 @@
   hosts: web
   gather_facts: false
   tasks:
-    - name: Changer l'index.html (Sans Python)
+    - name: Changer l'index.html
       raw: echo "<h1>Le serveur a bien été configuré !</h1>" > /usr/share/nginx/html/index.html
