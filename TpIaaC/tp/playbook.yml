@@ -1,0 +1,6 @@
+- name: Configurer le site web
+  hosts: web
+  gather_facts: false
+  tasks:
+    - name: Changer l'index.html (Sans Python)
+      raw: echo "<h1>Youpiiiii</h1>" > /usr/share/nginx/html/index.html

@@ -1,25 +1,25 @@
-# TP Infrastructure as Code : Terraform & Ansible 🚀
+# 🎓 TP : Déploiement Automatisé (Terraform & Ansible)
 
-Bienvenue dans ce TP de 30 minutes. Nous allons déployer un serveur web et le configurer automatiquement.
+## 0. Installation (À faire une seule fois au début)
+Dès que le terminal s'ouvre, copiez-collez cette commande :
+bash .devcontainer/setup.sh
 
-## Étape 1 : Déployer l'infrastructure (Terraform)
-1. Ouvrez le terminal (Ctrl + `).
-2. Allez dans le dossier du TP :
+*(Attendez le message "Tout est prêt !")*
+
+## 1. Terraform : Création du Serveur 🏗️
+1. Entrez dans le dossier :
    cd tp
-3. Initialisez Terraform :
+2. Lancez la construction :
    terraform init
-4. Lancez le déploiement :
    terraform apply -auto-approve
 
-👉 **Vérification** : Dans l'onglet "PORTS" (en bas à côté du terminal), cliquez sur la planète 🌐 à côté du port 8000. Vous devriez voir "Welcome to Nginx".
+👉 Vérifiez : Onglet PORTS > Globe 🌐 (Port 8000).
 
-## Étape 2 : Configuration (Ansible)
-On va changer la page d'accueil sans toucher au serveur manuellement.
-
-1. Lancez le playbook :
+## 2. Ansible : Configuration du Site 🎨
+1. Lancez la configuration :
    ansible-playbook -i inventory.ini playbook.yml
 
-👉 **Vérification** : Retournez sur votre page web et actualisez. Le message a changé !
+👉 Actualisez la page web : Le message a changé !
 
-## Étape 3 : Destruction
+## 3. Fin du TP 🧹
 terraform destroy -auto-approve
